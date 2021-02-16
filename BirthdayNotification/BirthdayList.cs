@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BirthdayNotification
 {
+    /// <summary>
+    /// Not used
+    /// </summary>
     public class BirthdayList
     {
         public List<BirthdayItem> birthdayItems = new List<BirthdayItem>();
@@ -20,14 +23,7 @@ namespace BirthdayNotification
 
         public bool IsDouble(BirthdayItem item)
         {
-            foreach (var i in birthdayItems)
-            {
-                if (i.Name == item.Name)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return birthdayItems.Any(i => i.Name == item.Name);
         }
     }
 }
